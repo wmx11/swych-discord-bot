@@ -2,7 +2,7 @@
   "apps": [
     {
       "name": "swych-discord-bot",
-      "script": "yarn",
+      "script": "npm",
       "args": "start"
     }
   ]
