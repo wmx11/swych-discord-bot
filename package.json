@@ -9,7 +9,7 @@
     "dev": "yarn ts-node index.ts",
     "start": "node dist/index.js",
     "production": "pm2 start app.json",
-    "build": "yarn train && yarn tsc"
+    "build": "yarn tsc"
   },
   "devDependencies": {
     "typescript": "^5.1.3"
