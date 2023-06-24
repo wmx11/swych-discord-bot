@@ -10,6 +10,7 @@ export default {
     'spicoli',
     'tooth man',
     'lmao',
+    'mike',
   ],
   enabled: true,
   reactions: ['🍗', '🧀'],
