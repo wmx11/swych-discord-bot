@@ -16,6 +16,12 @@ client.once('ready', () => {
   console.log('Discord Bot Ready');
 });
 
-client.on('messageCreate', async (message) => handleQna(message));
+client.on('messageCreate', async (message) => {
+  if (message.author.bot) {
+    return;
+  }
+
+  handleQna(message);
+});
 
 client.login(process.env.DISCORD_TOKEN);
