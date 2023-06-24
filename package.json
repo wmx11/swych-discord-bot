@@ -8,7 +8,7 @@
     "train": "yarn ts-node src/qna/trainQna.ts",
     "dev": "yarn ts-node index.ts",
     "start": "node dist/index.js",
-    "production": "pm2 start yarn --name 'swych-discord-bot' --start",
+    "production": "pm2 start yarn --name 'swych-discord-bot' -- start",
     "build": "yarn train && yarn tsc"
   },
   "devDependencies": {
