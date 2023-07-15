@@ -53,7 +53,11 @@ export default function (message: Message) {
         return;
       }
 
-      message.reply(finalAnswer);
+      if (message.mentions.repliedUser) {
+        message.mentions.repliedUser.send(finalAnswer);
+      } else {
+        message.reply(finalAnswer);
+      }
     } catch (error) {
       console.error('Could not reply to the message', error);
     }
