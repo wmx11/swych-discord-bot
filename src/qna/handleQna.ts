@@ -54,7 +54,9 @@ export default function (message: Message) {
       }
 
       if (message.mentions.repliedUser) {
-        message.mentions.repliedUser.send(finalAnswer);
+        message.channel.send(
+          `Hey <@${message.mentions.repliedUser.id}>, ${finalAnswer}`
+        );
       } else {
         message.reply(finalAnswer);
       }
