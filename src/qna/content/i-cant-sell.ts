@@ -18,8 +18,7 @@ export default {
   ],
   enabled: true,
   reactions: [],
-  answers: [
-    `
+  answers: `
   **If you cannot swap your tokens, make sure you are following your ATB limits!**
   You can only sell **up to 20%** of your total tokens **every 10 days** during Phase 1.
   
@@ -30,5 +29,4 @@ export default {
   
   • Find your ATB limits here:
   https://app.swych.finance/staking`,
-  ],
 } as Qna;
