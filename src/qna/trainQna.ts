@@ -34,7 +34,7 @@ const FINAL_FILE_NAME = 'trainedData.json';
   const commandsImport = await import(`./content/${COMMANDS}`);
 
   commandsImport.default.answers = `**List of available commands** \n ${commands.join(
-    ', '
+    ' '
   )}`;
 
   trainingDataArray.push(commandsImport.default);
