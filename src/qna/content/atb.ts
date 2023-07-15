@@ -1,7 +1,7 @@
 import { Qna } from '../../../types';
 
 export default {
-  id: 'i-cant-sell',
+  id: 'atb',
   keywords: [
     "why can't I sell",
     'how do I sell',
@@ -18,6 +18,7 @@ export default {
   ],
   enabled: true,
   reactions: [],
+  allowUserTag: true,
   answers: `
   **If you cannot swap your tokens, make sure you are following your ATB limits!**
   You can only sell **up to 20%** of your total tokens **every 10 days** during Phase 1.

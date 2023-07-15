@@ -1,7 +1,7 @@
 import { Qna } from '../../../types';
 
 export default {
-  id: 'swych-titano',
+  id: 'migration',
   keywords: [
     'what happened to titano',
     'is titano still alive',
@@ -11,9 +11,11 @@ export default {
     'how to trade titano',
     'migrate titano',
     'what happened to my titano tokens',
+    '>migration',
   ],
   enabled: true,
   reactions: [],
+  allowUserTag: true,
   answers: [
     `
   **Titano is no longer - Welcome SWYCH!**

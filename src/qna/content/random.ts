@@ -14,6 +14,7 @@ export default {
   ],
   enabled: true,
   reactions: ['🍗', '🧀'],
+  allowUserTag: false,
   answers: [
     'I have created the perfect thing: Blackpepper and Slap FUD dish',
     'Cheese goes well with other cheeses',

@@ -22,8 +22,10 @@ export default function (message: Message) {
   const messageContent = message?.content?.toLowerCase() ?? '';
 
   const answer = data.find((qnaItem) => {
-    return qnaItem.keywords.find((phrase) =>
-      messageContent.includes(phrase.toLowerCase())
+    return qnaItem.keywords.find(
+      (phrase) =>
+        messageContent.includes(phrase.toLowerCase()) ||
+        messageContent.includes(`>${qnaItem.id.toLowerCase()}`)
     );
   });
 

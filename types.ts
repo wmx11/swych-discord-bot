@@ -9,6 +9,7 @@
 //   ],
 //   enabled: true,
 //   reactions: [],
+//   allowUserTag: true,
 //   answers: [
 //     `
 // **Swych Contract Address:**
@@ -23,4 +24,7 @@ export type Qna = {
   enabled: boolean;
   reactions?: string[];
   answers: string[] | string;
+  allowUserTag?: boolean;
 };
+
+export const COMMANDS = 'commands';
