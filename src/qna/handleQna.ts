@@ -55,13 +55,14 @@ export default function (message: Message) {
         return;
       }
 
-      if (message.mentions.repliedUser) {
+      if (message.mentions.repliedUser && answer.allowUserTag) {
         message.channel.send(
           `Hey <@${message.mentions.repliedUser.id}>, ${finalAnswer}`
         );
-      } else {
-        message.reply(finalAnswer);
+        return;
       }
+
+      message.reply(finalAnswer);
     } catch (error) {
       console.error('Could not reply to the message', error);
     }

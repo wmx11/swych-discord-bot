@@ -15,6 +15,7 @@ export default {
     'the input token cannot be transferred',
     '>atb',
     "can't swap on swych",
+    'issues selling',
   ],
   enabled: true,
   reactions: [],
