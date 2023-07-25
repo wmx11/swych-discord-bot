@@ -15,7 +15,7 @@ export default {
   answers: `
   **Here's the Swych Roadmap!**
   *Some things are still being finalized and are yet to receive concrete dates*
-  * Perpetual Exchange and Phase 2 launch
+  * **Perpetual Exchange and Phase 2 Launch**
   Estimated launch in August. Direct integration with the token and NFTs is needed. The team needs to make sure the revenue is generated sustainably and equitably.
   Phase 2 will have no limits on sales or buys. Users can be rewarded with tokens for participating on the platform and trading, along with real yield generation.
 
