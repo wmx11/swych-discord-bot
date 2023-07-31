@@ -25,6 +25,7 @@ export type Qna = {
   reactions?: string[];
   answers: string[] | string;
   allowUserTag?: boolean;
+  autoRespondToUsers?: string[];
 };
 
 export const COMMANDS = 'commands';
