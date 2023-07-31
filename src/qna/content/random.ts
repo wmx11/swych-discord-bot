@@ -12,7 +12,7 @@ export default {
     'lmao',
     'mike',
   ],
-  enabled: true,
+  enabled: false,
   reactions: ['🍗', '🧀'],
   allowUserTag: false,
   answers: [
