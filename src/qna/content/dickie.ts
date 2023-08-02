@@ -3,7 +3,7 @@ import { Qna } from '../../../types';
 export default {
   id: 'dickie',
   keywords: ['dickie', 'richard'],
-  enabled: true,
+  enabled: false,
   reactions: ['🧀'],
   allowUserTag: true,
   autoRespondToUsers: ['839196298350821409'],
