@@ -12,7 +12,7 @@ export default {
     'lmao',
     'mike',
   ],
-  enabled: false,
+  enabled: true,
   reactions: ['🍗', '🧀'],
   allowUserTag: false,
   answers: [
@@ -34,5 +34,6 @@ export default {
     'If I spin fast enough - I can smell myself',
     'Phase 2 is all about having tons of cheese and tokens',
     "Let's eat some creamy cheesey cheese chicken",
+    "What's the difference between a Karen and Cheese? Karens don't get better with age.",
   ],
 } as Qna;
