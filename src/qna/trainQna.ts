@@ -24,6 +24,7 @@ const FINAL_FILE_NAME = 'trainedData.json';
     }
 
     trainingDataArray.push(contentData.default);
+    
     commands.push(`>${contentData.default.id} \n`);
   }
 

@@ -55,6 +55,10 @@ export default function (message: Message) {
         return;
       }
 
+      if (answer.deleteCallerMessage) {
+        message.delete();
+      }
+
       if (message.mentions.repliedUser && answer.allowUserTag) {
         message.channel.send(
           `Hey <@${message.mentions.repliedUser.id}>, ${finalAnswer}`
