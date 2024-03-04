@@ -22,8 +22,18 @@ export default function (message: Message) {
   const messageContent = message?.content?.toLowerCase() ?? '';
 
   let answer = data.find((qnaItem) => {
-    if (qnaItem?.autoRespondToUsers?.includes(message?.author?.id)) {
-      return true;
+    if (qnaItem.hasOwnProperty('autoRespondToUsers')) {
+      const qnaItemWithAutoRespond = qnaItem as typeof qnaItem & {
+        autoRespondToUsers: string[];
+      };
+
+      if (
+        qnaItemWithAutoRespond?.autoRespondToUsers?.includes(
+          message?.author?.id
+        )
+      ) {
+        return true;
+      }
     }
 
     return qnaItem.keywords.find(
