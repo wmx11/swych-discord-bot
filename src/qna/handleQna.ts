@@ -21,7 +21,11 @@ export default function (message: Message) {
 
   const messageContent = message?.content?.toLowerCase() ?? '';
 
-  const answer = data.find((qnaItem) => {
+  let answer = data.find((qnaItem) => {
+    if (qnaItem?.autoRespondToUsers?.includes(message?.author?.id)) {
+      return true;
+    }
+
     return qnaItem.keywords.find(
       (phrase) =>
         messageContent.includes(phrase.toLowerCase()) ||
