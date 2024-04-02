@@ -1,12 +1,12 @@
-import { Message } from 'discord.js';
-import trainedData from './trainedData.json';
-import { Qna } from '../../types';
-import { isMessageSubmittedInDisallowedChannel } from '../utils/channels';
+import { Message } from "discord.js";
+import trainedData from "./trainedData.json";
+import { Qna } from "../../types";
+import { isMessageSubmittedInDisallowedChannel } from "../utils/channels";
 
 // Cache the data
 const data = trainedData;
 
-const getAnswer = (answers: Qna['answers']) => {
+const getAnswer = (answers: Qna["answers"]) => {
   if (Array.isArray(answers)) {
     return answers.at(Math.round(Math.random() * answers.length));
   }
@@ -19,10 +19,10 @@ export default function (message: Message) {
     return;
   }
 
-  const messageContent = message?.content?.toLowerCase() ?? '';
+  const messageContent = message?.content?.toLowerCase() ?? "";
 
   let answer = data.find((qnaItem) => {
-    if (qnaItem.hasOwnProperty('autoRespondToUsers')) {
+    if (qnaItem.hasOwnProperty("autoRespondToUsers")) {
       const qnaItemWithAutoRespond = qnaItem as typeof qnaItem & {
         autoRespondToUsers: string[];
       };
@@ -57,7 +57,7 @@ export default function (message: Message) {
         message.react(reaction);
       });
     } catch (error) {
-      console.error('Could not react to the message', error);
+      console.error("Could not react to the message", error);
     }
   }
 
@@ -69,7 +69,9 @@ export default function (message: Message) {
         return;
       }
 
-      if (answer.deleteCallerMessage) {
+      if (
+        (answer as Qna & { deleteCallerMessage?: boolean })?.deleteCallerMessage
+      ) {
         message.delete();
       }
 
@@ -82,7 +84,7 @@ export default function (message: Message) {
 
       message.reply(finalAnswer);
     } catch (error) {
-      console.error('Could not reply to the message', error);
+      console.error("Could not reply to the message", error);
     }
   }
 }
